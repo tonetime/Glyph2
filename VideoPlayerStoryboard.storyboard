@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Video Player Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="videoplayer" id="BYZ-38-t0r" customClass="VideoPlayerController" customModule="Glyph" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="79M-Ld-5EI">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Title" id="ODw-AQ-GD4">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="fQq-9w-twE">
+                                            <connections>
+                                                <action selector="backButton:" destination="BYZ-38-t0r" id="tdc-0Y-276"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0hW-OG-KgT">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="0hW-OG-KgT" firstAttribute="top" secondItem="79M-Ld-5EI" secondAttribute="bottom" id="0tC-7G-cG4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0hW-OG-KgT" secondAttribute="bottom" id="6Fw-pZ-xGF"/>
+                            <constraint firstItem="79M-Ld-5EI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="afs-0O-LCl"/>
+                            <constraint firstAttribute="trailing" secondItem="79M-Ld-5EI" secondAttribute="trailing" id="dC4-Bb-Xw8"/>
+                            <constraint firstItem="0hW-OG-KgT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dT1-pO-9Yo"/>
+                            <constraint firstItem="79M-Ld-5EI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dmY-hM-1NK"/>
+                            <constraint firstAttribute="trailing" secondItem="0hW-OG-KgT" secondAttribute="trailing" id="lXu-QM-fvv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gestureView" destination="0hW-OG-KgT" id="C4m-Ah-XjY"/>
+                        <outlet property="navbar3" destination="79M-Ld-5EI" id="ogI-eV-smH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="372" y="415.14242878560725"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="6A4-QR-WfX">
+            <objects>
+                <avPlayerViewController storyboardIdentifier="pagecontent" videoGravity="AVLayerVideoGravityResizeAspect" id="tdd-ao-K2J" customClass="PlayerViewController" customModule="Glyph" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PJ9-E8-xx6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1045" y="782"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="96B-8a-6OZ">
+            <objects>
+                <pageViewController storyboardIdentifier="pagevc" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="iyb-KL-B6n" customClass="PageViewController" customModule="Glyph" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OCH-Ia-80a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1045" y="87"/>
+        </scene>
+    </scenes>
+</document>
